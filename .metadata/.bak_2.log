@@ -7,219 +7,13 @@ Framework arguments:  -product org.eclipse.epp.package.java.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
 
 This is a continuation of log file C:\Users\Chandranshi\Documents\Nmap Project\.metadata\.bak_1.log
-Created Time: 2019-06-27 10:54:54.100
+Created Time: 2019-06-28 15:17:18.115
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.100
-!MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
-
-!STACK 0
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:138)
-	at org.eclipse.xtext.service.MethodBasedModule.configure(MethodBasedModule.java:50)
-	at org.eclipse.xtext.service.CompoundModule.configure(CompoundModule.java:35)
-	at org.eclipse.xtext.service.AbstractGenericModule.configure(AbstractGenericModule.java:33)
-	at org.eclipse.xtext.service.DefaultRuntimeModule.configure(DefaultRuntimeModule.java:76)
-	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.configure(AbstractFXGraphRuntimeModule.java:25)
-	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:223)
-	at com.google.inject.spi.Elements.getElements(Elements.java:101)
-	at com.google.inject.spi.Elements.getElements(Elements.java:92)
-	at com.google.inject.util.Modules$RealOverriddenModuleBuilder$1.configure(Modules.java:152)
-	at com.google.inject.AbstractModule.configure(AbstractModule.java:59)
-	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:223)
-	at com.google.inject.spi.Elements.getElements(Elements.java:101)
-	at com.google.inject.spi.Elements.getElements(Elements.java:92)
-	at com.google.inject.util.Modules$RealOverriddenModuleBuilder$1.configure(Modules.java:152)
-	at com.google.inject.AbstractModule.configure(AbstractModule.java:59)
-	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:223)
-	at com.google.inject.spi.Elements.getElements(Elements.java:101)
-	at com.google.inject.internal.InjectorShell$Builder.build(InjectorShell.java:133)
-	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:103)
-	at com.google.inject.Guice.createInjector(Guice.java:95)
-	at com.google.inject.Guice.createInjector(Guice.java:72)
-	at com.google.inject.Guice.createInjector(Guice.java:62)
-	at org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator.createInjector(FXGraphActivator.java:67)
-	at org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator.getInjector(FXGraphActivator.java:55)
-	at org.eclipse.fx.ide.fxgraph.ui.FXGraphExecutableExtensionFactory.getInjector(FXGraphExecutableExtensionFactory.java:26)
-	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:53)
-	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:265)
-	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
-	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:174)
-	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:150)
-	at org.eclipse.ui.views.markers.MarkerField.annotateImage(MarkerField.java:78)
-	at org.eclipse.ui.internal.views.markers.MarkerProblemSeverityAndMessageField.update(MarkerProblemSeverityAndMessageField.java:80)
-	at org.eclipse.ui.internal.views.markers.MarkerColumnLabelProvider.update(MarkerColumnLabelProvider.java:57)
-	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:144)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:946)
-	at org.eclipse.ui.internal.views.markers.MarkersTreeViewer.doUpdateItem(MarkersTreeViewer.java:70)
-	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:120)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
-	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1025)
-	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:478)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
-	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
-	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2161)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2772)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1953)
-	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:677)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1959)
-	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:677)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1929)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1886)
-	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1533)
-	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1449)
-	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:363)
-	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1410)
-	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1533)
-	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:538)
-	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1494)
-	at org.eclipse.ui.internal.views.markers.UIUpdateJob.runInUIThread(UIUpdateJob.java:108)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:98)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3919)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3550)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
-Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor848.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
-	... 87 more
-Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/validation/UnresolvedAnnotationTypeAwareMessageProducer
-	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
-	... 91 more
-
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.162
-!MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
-
-!STACK 0
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:138)
-	at org.eclipse.xtext.service.MethodBasedModule.configure(MethodBasedModule.java:50)
-	at org.eclipse.xtext.service.CompoundModule.configure(CompoundModule.java:35)
-	at org.eclipse.xtext.service.AbstractGenericModule.configure(AbstractGenericModule.java:33)
-	at org.eclipse.xtext.service.DefaultRuntimeModule.configure(DefaultRuntimeModule.java:76)
-	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.configure(AbstractFXGraphRuntimeModule.java:25)
-	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:223)
-	at com.google.inject.spi.Elements.getElements(Elements.java:101)
-	at com.google.inject.spi.Elements.getElements(Elements.java:92)
-	at com.google.inject.util.Modules$RealOverriddenModuleBuilder$1.configure(Modules.java:152)
-	at com.google.inject.AbstractModule.configure(AbstractModule.java:59)
-	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:223)
-	at com.google.inject.spi.Elements.getElements(Elements.java:101)
-	at com.google.inject.spi.Elements.getElements(Elements.java:92)
-	at com.google.inject.util.Modules$RealOverriddenModuleBuilder$1.configure(Modules.java:152)
-	at com.google.inject.AbstractModule.configure(AbstractModule.java:59)
-	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:223)
-	at com.google.inject.spi.Elements.getElements(Elements.java:101)
-	at com.google.inject.internal.InjectorShell$Builder.build(InjectorShell.java:133)
-	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:103)
-	at com.google.inject.Guice.createInjector(Guice.java:95)
-	at com.google.inject.Guice.createInjector(Guice.java:72)
-	at com.google.inject.Guice.createInjector(Guice.java:62)
-	at org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator.createInjector(FXGraphActivator.java:67)
-	at org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator.getInjector(FXGraphActivator.java:55)
-	at org.eclipse.fx.ide.fxgraph.ui.FXGraphExecutableExtensionFactory.getInjector(FXGraphExecutableExtensionFactory.java:26)
-	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:53)
-	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:265)
-	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
-	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:174)
-	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:150)
-	at org.eclipse.ui.views.markers.MarkerField.annotateImage(MarkerField.java:78)
-	at org.eclipse.ui.internal.views.markers.MarkerProblemSeverityAndMessageField.update(MarkerProblemSeverityAndMessageField.java:80)
-	at org.eclipse.ui.internal.views.markers.MarkerColumnLabelProvider.update(MarkerColumnLabelProvider.java:57)
-	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:144)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:946)
-	at org.eclipse.ui.internal.views.markers.MarkersTreeViewer.doUpdateItem(MarkersTreeViewer.java:70)
-	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:120)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
-	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1025)
-	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:478)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
-	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
-	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2161)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2772)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1953)
-	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:677)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1959)
-	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:677)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1929)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1886)
-	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1533)
-	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1449)
-	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:363)
-	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1410)
-	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1533)
-	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:538)
-	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1494)
-	at org.eclipse.ui.internal.views.markers.UIUpdateJob.runInUIThread(UIUpdateJob.java:108)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:98)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3919)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3550)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
-Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor858.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
-	... 87 more
-Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFileSystemSupport
-	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
-	... 91 more
-
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.209
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.115
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.225
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.125
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -310,7 +104,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.240
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.140
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -413,7 +207,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.240
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.145
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -526,7 +320,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.256
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.145
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -629,7 +423,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.256
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.156
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -732,11 +526,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.303
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.205
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.318
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.215
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -827,7 +621,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.318
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.225
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -930,7 +724,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.334
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.235
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -1043,7 +837,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.334
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.245
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -1146,7 +940,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.350
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.245
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -1249,11 +1043,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.396
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.295
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.396
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.305
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -1344,7 +1138,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.412
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.320
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -1447,7 +1241,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.428
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.325
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -1560,7 +1354,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.428
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.335
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -1663,7 +1457,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.443
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.340
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -1766,11 +1560,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.490
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.390
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.490
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.395
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -1861,7 +1655,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.506
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.405
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -1964,7 +1758,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.506
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.415
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -2077,7 +1871,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.521
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.415
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -2180,7 +1974,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.521
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.430
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -2283,11 +2077,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.568
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.480
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.584
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.485
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -2378,7 +2172,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.600
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.495
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -2481,7 +2275,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.600
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.505
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -2594,7 +2388,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.600
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.505
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -2697,7 +2491,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.615
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.515
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -2800,11 +2594,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.662
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.565
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.678
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.575
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -2895,7 +2689,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.678
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.585
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -2998,7 +2792,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.693
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.585
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -3111,7 +2905,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.693
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.595
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -3214,7 +3008,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.709
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.605
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -3317,11 +3111,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.756
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.656
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.756
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.656
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -3412,7 +3206,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.771
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.675
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -3515,7 +3309,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.787
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.680
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -3628,7 +3422,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.787
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.685
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -3731,7 +3525,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.787
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.695
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -3834,11 +3628,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.834
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.740
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.849
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.745
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -3929,7 +3723,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.865
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.756
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -4032,7 +3826,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.865
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.765
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -4145,7 +3939,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.881
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.775
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -4248,7 +4042,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.881
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.785
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -4351,11 +4145,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.928
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.835
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.943
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.845
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -4446,7 +4240,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.959
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.857
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -4549,7 +4343,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.959
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.865
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -4662,7 +4456,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.974
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.865
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -4765,7 +4559,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:54.974
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.875
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -4868,11 +4662,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.037
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.925
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.053
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.935
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -4963,7 +4757,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.068
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.945
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -5066,7 +4860,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.068
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.957
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -5179,7 +4973,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.068
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.965
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -5282,7 +5076,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.084
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:18.975
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -5385,11 +5179,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.131
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.025
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.146
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.025
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -5480,7 +5274,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.146
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.045
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -5583,7 +5377,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.162
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.045
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -5696,7 +5490,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.162
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.057
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -5799,7 +5593,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.178
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.065
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -5902,11 +5696,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.240
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.125
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.256
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.135
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -5997,7 +5791,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.256
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.145
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -6100,7 +5894,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.271
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.145
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -6213,7 +6007,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.271
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.157
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -6316,7 +6110,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.287
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.165
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -6419,11 +6213,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.334
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.245
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.334
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.255
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -6514,7 +6308,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.349
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.265
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -6617,7 +6411,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.365
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.265
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -6730,7 +6524,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.365
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.275
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -6833,7 +6627,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.381
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.285
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -6936,11 +6730,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.427
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.335
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.427
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.345
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -7031,7 +6825,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.443
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.357
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -7134,7 +6928,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.459
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.365
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -7247,7 +7041,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.459
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.365
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -7350,7 +7144,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.474
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.375
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -7453,11 +7247,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.552
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.425
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.552
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.435
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -7548,7 +7342,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.568
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.445
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -7651,7 +7445,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.584
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.458
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -7764,7 +7558,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.584
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.465
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -7867,7 +7661,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.599
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.465
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -7970,11 +7764,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.662
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.515
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.662
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.525
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -8065,7 +7859,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.677
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.540
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -8168,7 +7962,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.677
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.545
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -8281,7 +8075,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.693
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.545
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -8384,7 +8178,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.693
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.555
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -8487,11 +8281,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.755
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.595
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.755
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.605
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -8582,7 +8376,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.771
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.615
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -8685,7 +8479,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.787
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.625
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -8798,7 +8592,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.787
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.635
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -8901,7 +8695,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.802
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.635
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -9004,11 +8798,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.880
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.685
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.896
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.695
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -9099,7 +8893,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.912
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.705
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -9202,7 +8996,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.951
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.715
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -9315,7 +9109,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.951
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.715
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -9418,7 +9212,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:55.967
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.725
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -9521,11 +9315,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.030
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.775
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.030
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.785
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -9616,7 +9410,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.052
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.795
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -9719,7 +9513,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.067
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.805
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -9832,7 +9626,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.067
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.810
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -9935,7 +9729,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.083
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.815
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -10038,11 +9832,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.145
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.865
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.152
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.870
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -10133,7 +9927,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.168
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.885
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -10236,7 +10030,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.168
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.885
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -10349,7 +10143,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.183
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.895
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -10452,7 +10246,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.199
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.905
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -10555,11 +10349,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.252
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.955
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.268
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.958
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -10650,7 +10444,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.283
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.965
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -10753,7 +10547,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.299
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.975
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -10866,7 +10660,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.299
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.985
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -10969,7 +10763,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.315
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:19.995
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -11072,11 +10866,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.368
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.040
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.368
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.045
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -11167,7 +10961,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.384
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.058
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -11270,7 +11064,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.399
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.065
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -11383,7 +11177,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.399
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.075
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -11486,7 +11280,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.415
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.085
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -11589,11 +11383,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.468
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.125
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.468
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.135
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -11684,7 +11478,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.484
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.150
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -11787,7 +11581,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.500
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.155
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -11900,7 +11694,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.515
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.158
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -12003,7 +11797,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.515
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.170
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -12106,11 +11900,11 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.584
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.215
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:54:56.584
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.225
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
 
 1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
@@ -12201,13 +11995,7 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-06-27 10:55:07.475
-!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-06-27 10:55:07.490
-!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:55:08.131
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.235
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -12310,7 +12098,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLoca
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:55:08.147
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.245
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
 
 !STACK 0
@@ -12423,7 +12211,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.Worksp
 	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
 	... 96 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:55:08.147
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.245
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -12526,7 +12314,7 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/annotations/v
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindILinkingDiagnosticMessageProvider(AbstractFXGraphRuntimeModule.java:274)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:55:08.162
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.258
 !MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
 
 !STACK 0
@@ -12629,6 +12417,313 @@ Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/JavaIOFi
 	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindMutableFileSystemSupport(AbstractFXGraphRuntimeModule.java:249)
 	... 91 more
 
-!ENTRY org.apache.log4j 4 0 2019-06-27 10:55:08.225
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.315
 !MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Failed to create injector for org.eclipse.fx.ide.fxgraph.FXGraph
 
+
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.320
+!MESSAGE org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator  - Guice creation errors:
+
+1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
+  while locating org.eclipse.xtext.builder.EclipseSourceFolderProvider
+    for field at org.eclipse.xtext.xbase.ui.hover.XbaseHoverDocumentationProvider.sourceFolderProvider(Unknown Source)
+  at org.eclipse.xtext.service.MethodBasedModule.configure(MethodBasedModule.java:57)
+
+1 error
+
+!STACK 0
+com.google.inject.CreationException: Guice creation errors:
+
+1) No implementation for org.eclipse.xtext.builder.EclipseSourceFolderProvider was bound.
+  while locating org.eclipse.xtext.builder.EclipseSourceFolderProvider
+    for field at org.eclipse.xtext.xbase.ui.hover.XbaseHoverDocumentationProvider.sourceFolderProvider(Unknown Source)
+  at org.eclipse.xtext.service.MethodBasedModule.configure(MethodBasedModule.java:57)
+
+1 error
+	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:435)
+	at com.google.inject.internal.InternalInjectorCreator.initializeStatically(InternalInjectorCreator.java:154)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:106)
+	at com.google.inject.Guice.createInjector(Guice.java:95)
+	at com.google.inject.Guice.createInjector(Guice.java:72)
+	at com.google.inject.Guice.createInjector(Guice.java:62)
+	at org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator.createInjector(FXGraphActivator.java:67)
+	at org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator.getInjector(FXGraphActivator.java:55)
+	at org.eclipse.fx.ide.fxgraph.ui.FXGraphExecutableExtensionFactory.getInjector(FXGraphExecutableExtensionFactory.java:26)
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:53)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:265)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:174)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:150)
+	at org.eclipse.ui.views.markers.MarkerField.annotateImage(MarkerField.java:78)
+	at org.eclipse.ui.internal.views.markers.MarkerProblemSeverityAndMessageField.update(MarkerProblemSeverityAndMessageField.java:80)
+	at org.eclipse.ui.internal.views.markers.MarkerColumnLabelProvider.update(MarkerColumnLabelProvider.java:57)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:144)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:946)
+	at org.eclipse.ui.internal.views.markers.MarkersTreeViewer.doUpdateItem(MarkersTreeViewer.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:120)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1025)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:478)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2161)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2772)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1953)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:677)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1959)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:677)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1929)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1886)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1533)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1449)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:363)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1410)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1533)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:538)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1494)
+	at org.eclipse.ui.internal.views.markers.UIUpdateJob.runInUIThread(UIUpdateJob.java:108)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:98)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3919)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3550)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.325
+!MESSAGE org.eclipse.xtext.service.CompoundModule  - java.lang.reflect.InvocationTargetException
+
+!STACK 0
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:138)
+	at org.eclipse.xtext.service.MethodBasedModule.configure(MethodBasedModule.java:50)
+	at org.eclipse.xtext.service.CompoundModule.configure(CompoundModule.java:35)
+	at org.eclipse.xtext.service.AbstractGenericModule.configure(AbstractGenericModule.java:33)
+	at org.eclipse.xtext.service.DefaultRuntimeModule.configure(DefaultRuntimeModule.java:76)
+	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.configure(AbstractFXGraphRuntimeModule.java:25)
+	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:223)
+	at com.google.inject.spi.Elements.getElements(Elements.java:101)
+	at com.google.inject.spi.Elements.getElements(Elements.java:92)
+	at com.google.inject.util.Modules$RealOverriddenModuleBuilder$1.configure(Modules.java:152)
+	at com.google.inject.AbstractModule.configure(AbstractModule.java:59)
+	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:223)
+	at com.google.inject.spi.Elements.getElements(Elements.java:101)
+	at com.google.inject.spi.Elements.getElements(Elements.java:92)
+	at com.google.inject.util.Modules$RealOverriddenModuleBuilder$1.configure(Modules.java:152)
+	at com.google.inject.AbstractModule.configure(AbstractModule.java:59)
+	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:223)
+	at com.google.inject.spi.Elements.getElements(Elements.java:101)
+	at com.google.inject.internal.InjectorShell$Builder.build(InjectorShell.java:133)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:103)
+	at com.google.inject.Guice.createInjector(Guice.java:95)
+	at com.google.inject.Guice.createInjector(Guice.java:72)
+	at com.google.inject.Guice.createInjector(Guice.java:62)
+	at org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator.createInjector(FXGraphActivator.java:67)
+	at org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator.getInjector(FXGraphActivator.java:55)
+	at org.eclipse.fx.ide.fxgraph.ui.FXGraphExecutableExtensionFactory.getInjector(FXGraphExecutableExtensionFactory.java:26)
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:53)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:265)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:174)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:150)
+	at org.eclipse.ui.views.markers.MarkerField.annotateImage(MarkerField.java:78)
+	at org.eclipse.ui.internal.views.markers.MarkerProblemSeverityAndMessageField.update(MarkerProblemSeverityAndMessageField.java:80)
+	at org.eclipse.ui.internal.views.markers.MarkerColumnLabelProvider.update(MarkerColumnLabelProvider.java:57)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:144)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:946)
+	at org.eclipse.ui.internal.views.markers.MarkersTreeViewer.doUpdateItem(MarkersTreeViewer.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:120)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1025)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:478)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2161)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2772)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1953)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:677)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1959)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:677)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1929)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1886)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1533)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1449)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:363)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1410)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1533)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:538)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1494)
+	at org.eclipse.ui.internal.views.markers.UIUpdateJob.runInUIThread(UIUpdateJob.java:108)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:98)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3919)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3550)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor844.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.xtext.service.MethodBasedModule.invokeMethod(MethodBasedModule.java:136)
+	... 87 more
+Caused by: java.lang.NoClassDefFoundError: org/eclipse/xtext/xbase/file/FileLocationsImpl
+	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.bindFileLocations(AbstractFXGraphRuntimeModule.java:254)
+	... 91 more
+
+!ENTRY org.apache.log4j 4 0 2019-06-28 15:17:20.335
+!MESSAGE org.eclipse.xtext.service.CompoundModule  - Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
+
+!STACK 0
+java.lang.TypeNotPresentException: Type org.eclipse.xtext.xbase.file.WorkspaceConfig not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.reflectiveObjects.WildcardTypeImpl.getUpperBounds(WildcardTypeImpl.java:130)
+	at org.eclipse.xtext.service.MethodBasedModule.getFirstTypeParameter(MethodBasedModule.java:108)
+	at org.eclipse.xtext.service.MethodBasedModule.getKeyType(MethodBasedModule.java:99)
+	at org.eclipse.xtext.service.ProviderModule.getKeyType(ProviderModule.java:39)
+	at org.eclipse.xtext.service.MethodBasedModule.configure(MethodBasedModule.java:48)
+	at org.eclipse.xtext.service.CompoundModule.configure(CompoundModule.java:35)
+	at org.eclipse.xtext.service.AbstractGenericModule.configure(AbstractGenericModule.java:33)
+	at org.eclipse.xtext.service.DefaultRuntimeModule.configure(DefaultRuntimeModule.java:76)
+	at org.eclipse.fx.ide.fxgraph.AbstractFXGraphRuntimeModule.configure(AbstractFXGraphRuntimeModule.java:25)
+	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:223)
+	at com.google.inject.spi.Elements.getElements(Elements.java:101)
+	at com.google.inject.spi.Elements.getElements(Elements.java:92)
+	at com.google.inject.util.Modules$RealOverriddenModuleBuilder$1.configure(Modules.java:152)
+	at com.google.inject.AbstractModule.configure(AbstractModule.java:59)
+	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:223)
+	at com.google.inject.spi.Elements.getElements(Elements.java:101)
+	at com.google.inject.spi.Elements.getElements(Elements.java:92)
+	at com.google.inject.util.Modules$RealOverriddenModuleBuilder$1.configure(Modules.java:152)
+	at com.google.inject.AbstractModule.configure(AbstractModule.java:59)
+	at com.google.inject.spi.Elements$RecordingBinder.install(Elements.java:223)
+	at com.google.inject.spi.Elements.getElements(Elements.java:101)
+	at com.google.inject.internal.InjectorShell$Builder.build(InjectorShell.java:133)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:103)
+	at com.google.inject.Guice.createInjector(Guice.java:95)
+	at com.google.inject.Guice.createInjector(Guice.java:72)
+	at com.google.inject.Guice.createInjector(Guice.java:62)
+	at org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator.createInjector(FXGraphActivator.java:67)
+	at org.eclipse.fx.ide.fxgraph.ui.internal.FXGraphActivator.getInjector(FXGraphActivator.java:55)
+	at org.eclipse.fx.ide.fxgraph.ui.FXGraphExecutableExtensionFactory.getInjector(FXGraphExecutableExtensionFactory.java:26)
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:53)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:265)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:174)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:150)
+	at org.eclipse.ui.views.markers.MarkerField.annotateImage(MarkerField.java:78)
+	at org.eclipse.ui.internal.views.markers.MarkerProblemSeverityAndMessageField.update(MarkerProblemSeverityAndMessageField.java:80)
+	at org.eclipse.ui.internal.views.markers.MarkerColumnLabelProvider.update(MarkerColumnLabelProvider.java:57)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:144)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:946)
+	at org.eclipse.ui.internal.views.markers.MarkersTreeViewer.doUpdateItem(MarkersTreeViewer.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:120)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1025)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:478)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2161)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2772)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1953)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:677)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1959)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:677)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1929)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1886)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1533)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1449)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:363)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1410)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1533)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:538)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1494)
+	at org.eclipse.ui.internal.views.markers.UIUpdateJob.runInUIThread(UIUpdateJob.java:108)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:98)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3919)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3550)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.xtext.xbase.file.WorkspaceConfig cannot be found by org.eclipse.fx.ide.fxgraph_1.2.0.201501301049
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:511)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 96 more

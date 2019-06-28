@@ -18,7 +18,7 @@ public class NMapSanner implements PortScanner {
 		boolean status = false;
 		if (OSChecker.isUnix()) {
 
-			String command[] = { "nmap", "-A", "-T4", para,"--defeat-rst-ratelimit", "oX", fileName, " ", cidr };
+			String command[] = { "nmap", "-A", "-T4", "-F","--defeat-rst-ratelimit", "oX", fileName, " ", cidr };
 //			String path=tempDir+"/scan/nmap";
 			status = check(command, null);
 			return fileName;
@@ -26,14 +26,14 @@ public class NMapSanner implements PortScanner {
 		} else if (OSChecker.isWindows()) {
 
 			//fileName = tempDir + "/scan/nmap-7.70/" + fileName;
-			String command[] = { tempDir +"/scan/nmap-7.70/" + "nmap.exe", "-A", "-T4", para,"--defeat-rst-ratelimit", "-oX", fileName, " ",cidr };
+			String command[] = { tempDir +"/scan/nmap-7.70/" + "nmap.exe", "-A", "-T4", "-F","--defeat-rst-ratelimit", "-oX", fileName, " ",cidr };
 			String path = tempDir + "/scan/nmap-7.70";
 			status = check(command,path);
 			return fileName;
 
 		} else if (OSChecker.isMAC()) {
 
-			String command[] = { "nmap.sh", "-A", "-T4", para,"--defeat-rst-ratelimit", "oX", fileName, " ", cidr };
+			String command[] = { "nmap.sh", "-A", "-T4", "-F","--defeat-rst-ratelimit", "oX", fileName, " ", cidr };
 			String path = tempDir + "/scan/nmap";
 			status = check(command, path);
 			return fileName;

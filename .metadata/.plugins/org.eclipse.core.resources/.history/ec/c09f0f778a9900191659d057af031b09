@@ -164,10 +164,6 @@ public class startHere {
 
 					btnStartDownloads.setEnabled(false);
 					String para="";
-					if(rdbtnNewRadioButton_1.isSelected())
-						para="-F";
-					else
-						para="-p-";
 					String input = txtEnterHostTo.getText();
 					startScan sc = new startScan();
 					sc.scan(tempDir, input,para);

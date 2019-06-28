@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 public class startScan {
 
-	public void scan(String tmpDir,String input,String para) throws Exception {
+	public void scan(String tmpDir,String input) throws Exception {
 		String tempDir = System.getProperty("java.io.tmpdir");
 
 		List<NiktoScanResponse> niktoResponse = new ArrayList<NiktoScanResponse>();
@@ -23,7 +23,7 @@ public class startScan {
 		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
 		String fileName = tempDir+"/scan/nmap-7.70/temp_output.xml";
 		String outputPDF = tmpDir+"/scan/report.pdf";
-		para="-p-";
+		String para="";
 		fileName=sc.scan(fileName, input,para);
 			if(fileName!=null)
 			{	ReportGenerator oj = new ReportGenerator();
