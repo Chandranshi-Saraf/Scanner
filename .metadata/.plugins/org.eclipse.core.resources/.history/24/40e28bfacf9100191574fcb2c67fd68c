@@ -1,0 +1,66 @@
+package com.instasafe.nmapscanner;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class VulnerablityScan {
+	private static final int MYTHREADS = 3;
+	List<NiktoScanResponse> niktoResponse = new ArrayList<NiktoScanResponse>();
+	List<ZapSite> zapSite = new ArrayList<ZapSite>();
+	public List<NiktoScanResponse> niktoScan(List<HostInfo> hostList, String tmpDir) throws Exception {
+//		SecondScan response = new SecondScan();
+		
+//		List<ZapSite> zsite = new ArrayList<ZapSite>();
+//		NiktoScanResponse nResponse =null;
+		ExecutorService executor = Executors.newFixedThreadPool(MYTHREADS);
+//		PDFWriter pdf = new PDFWriter("Nikto Scan.pdf");
+		String host = "";
+		System.out.println(hostList.size());
+		for (int i = 0; i < hostList.size(); i++) {
+			System.out.println("Host for Nikto scan: " + hostList.get(i).getHostAddr());
+			host = hostList.get(i).getHostAddr();	
+			Runnable worker = new myRunnable(host,i);
+			executor.execute(worker);
+			Thread.sleep(1200);			
+		}executor.shutdown();
+
+			// Wait until all threads are finish
+			while (!executor.isTerminated()) {
+	 
+			}
+		System.out.println("\nFinished all threads");
+		zapSite=myRunnable.zapSite;
+			
+//			if (hostList.get(i).getPortInfo() != null) {
+//				for (int j = 0; j < hostList.get(i).getPortInfo().size(); j++) {
+//					System.out.println(hostList.get(i).getPortInfo().size());
+//					port = hostList.get(i).getPortInfo().get(j).getPort();
+//					nResponse=response.scanForVulnerabilities(host, port);
+//					
+//					if (nResponse== null) {
+//						
+//						System.out.println("NULL!");
+//					}
+//					else
+//					{						
+//						niktoResponse.add(nResponse);
+//						System.out.println("Port for Nikto scan: " + hostList.get(i).getPortInfo().get(j).getPort());
+///					pdf.addVulnerablity(niktoResponse.get(j));
+//						String url = host + ":" + port;
+//						ZapScan zs = new ZapScan();
+//						zsite=zs.scan(tmpDir, url);
+//						for(int k=0; k<zsite.size();k++)
+//						{
+//							zapSite.add(zsite.get(k));
+//						}
+//					}
+//				}
+//			}
+//		
+//		pdf.closeNikto();
+		return niktoResponse;
+
+	}
+}

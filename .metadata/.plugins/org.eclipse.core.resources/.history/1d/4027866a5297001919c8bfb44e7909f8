@@ -1,0 +1,14 @@
+package com.instasafe.nmapscanner;
+
+import javax.swing.JPanel;
+
+public class logPanel extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public logPanel() {
+
+	}
+
+}

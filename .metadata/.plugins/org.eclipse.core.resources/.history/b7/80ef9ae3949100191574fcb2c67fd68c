@@ -1,0 +1,41 @@
+package com.instasafe.nmapscanner;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+
+public class myRunnable implements Runnable{
+	private final String url;
+	String fileName;
+	String tempDir = System.getProperty("java.io.tmpdir");
+	static List<ZapSite> zsite = new ArrayList<ZapSite>();
+	 
+	myRunnable(String url, int i) throws ParserConfigurationException, TransformerException, IOException {
+		fileName="output"+Integer.toString(i)+".xml";
+		File file = new File(fileName);
+        file.createNewFile();
+		this.url = url;
+	}
+
+	@Override
+	public void run() {
+		ZapScan sc= new ZapScan();		
+		zsite=(sc.scan(tempDir, url));
+	}
+
+	
+
+}

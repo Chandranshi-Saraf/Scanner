@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Thu May 23 13:34:49 2019 as: nmap -A -T4 -F 
+	-oX nmap_output.xml 192.168.1.0/24 -->
+<nmaprun scanner="nmap"
+	args="nmap -A -T4 -F -oX nmap_output.xml 192.168.1.0/24"
+	start="1558598689" startstr="Thu May 23 13:34:49 2019" version="7.70"
+	xmloutputversion="1.04">
+	<scaninfo type="connect" protocol="tcp" numservices="100"
+		services="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157" />
+	<verbose level="0" />
+	<debugging level="0" />
+	<host starttime="1558598689" endtime="1558599006">
+		<status state="up" reason="syn-ack" reason_ttl="0" />
+		<address addr="192.168.1.1" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="96">
+				<extrareasons reason="conn-refused" count="96" />
+			</extraports>
+			<port protocol="tcp" portid="53">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="domain"
+					extrainfo="generic dns response: NOTIMP"
+					servicefp="SF-Port53-TCP:V=7.70%I=7%D=5/23%Time=5CE65436%P=x86_64-pc-linux-gnu%r(DNSVersionBindReqTCP,20,&quot;\0\x1e\0\x06\x81\x82\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03&quot;)%r(DNSStatusRequestTCP,E,&quot;\0\x0c\0\0\x90\x04\0\0\0\0\0\0\0\0&quot;);"
+					method="probed" conf="10" />
+				<script id="fingerprint-strings"
+					output="&#xa;  DNSVersionBindReqTCP: &#xa;    version&#xa;    bind">
+					<elem key="DNSVersionBindReqTCP">&#xa; version&#xa; bind</elem>
+				</script>
+			</port>
+			<port protocol="tcp" portid="80">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="http" product=""
+					servicefp="SF-Port80-TCP:V=7.70%I=7%D=5/23%Time=5CE65436%P=x86_64-pc-linux-gnu%r(GenericLines,193,&quot;\(null\)\x20400\x20Bad\x20Request\r\nServer:\x20\r\nDate:\x20Thu,\x2023\x20May\x202019\x2008:05:20\x20GMT\r\nContent-Type:\x20text/html\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nConnection:\x20close\r\n\r\n\t\t&lt;HTML&gt;\n\t\t&lt;HEAD&gt;&lt;TITLE&gt;400\x20Bad\x20Request&lt;/TITLE&gt;&lt;/HEAD&gt;\n\t\t&lt;BODY\x20BGCOLOR=\&quot;#cc9999\&quot;\x20TEXT=\&quot;#000000\&quot;\x20LINK=\&quot;#2020ff\&quot;\x20VLINK=\&quot;#4040cc\&quot;&gt;\n\t\t&lt;H4&gt;400\x20Bad\x20Request&lt;/H4&gt;\nCan&apos;t\x20parse\x20request\.\n&lt;/BODY&gt;\n&lt;/HTML&gt;\n&quot;);"
+					method="probed" conf="10" />
+				<script id="fingerprint-strings"
+					output="&#xa;  GenericLines: &#xa;    (null) 400 Bad Request&#xa;    Server: &#xa;    Date: Thu, 23 May 2019 08:05:20 GMT&#xa;    Content-Type: text/html&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    X-XSS-Protection: 1;mode=block&#xa;    X-Content-Type-Options: nosniff&#xa;    Connection: close&#xa;    &lt;HTML&gt;&#xa;    &lt;HEAD&gt;&lt;TITLE&gt;400 Bad Request&lt;/TITLE&gt;&lt;/HEAD&gt;&#xa;    &lt;BODY BGCOLOR=&quot;#cc9999&quot; TEXT=&quot;#000000&quot; LINK=&quot;#2020ff&quot; VLINK=&quot;#4040cc&quot;&gt;&#xa;    &lt;H4&gt;400 Bad Request&lt;/H4&gt;&#xa;    Can&apos;t parse request.&#xa;    &lt;/BODY&gt;&#xa;    &lt;/HTML&gt;">
+					<elem key="GenericLines">&#xa; (null) 400 Bad Request&#xa; Server: &#xa;
+						Date: Thu, 23 May 2019 08:05:20 GMT&#xa; Content-Type:
+						text/html&#xa; X-Frame-Options: SAMEORIGIN&#xa; X-XSS-Protection:
+						1;mode=block&#xa; X-Content-Type-Options: nosniff&#xa; Connection:
+						close&#xa; &lt;HTML&gt;&#xa; &lt;HEAD&gt;&lt;TITLE&gt;400 Bad
+						Request&lt;/TITLE&gt;&lt;/HEAD&gt;&#xa; &lt;BODY
+						BGCOLOR=&quot;#cc9999&quot; TEXT=&quot;#000000&quot;
+						LINK=&quot;#2020ff&quot; VLINK=&quot;#4040cc&quot;&gt;&#xa;
+						&lt;H4&gt;400 Bad Request&lt;/H4&gt;&#xa; Can&apos;t parse
+						request.&#xa; &lt;/BODY&gt;&#xa; &lt;/HTML&gt;</elem>
+				</script>
+				<script id="http-auth"
+					output="&#xa;HTTP/1.1 401 Unauthorized\x0D&#xa;  Basic realm=NETGEAR R6220&#xa;">
+					<table>
+						<elem key="scheme">Basic</elem>
+						<table key="params">
+							<elem key="realm">NETGEAR R6220</elem>
+						</table>
+					</table>
+				</script>
+				<script id="http-server-header" output="&lt;empty&gt;">
+					<elem></elem>
+				</script>
+				<script id="http-title" output=" Authorization warning">
+					<elem key="title"> Authorization warning</elem>
+				</script>
+			</port>
+			<port protocol="tcp" portid="631">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="ipp" method="table" conf="3" />
+			</port>
+			<port protocol="tcp" portid="5000">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="upnp"
+					servicefp="SF-Port5000-TCP:V=7.70%I=7%D=5/23%Time=5CE65431%P=x86_64-pc-linux-gnu%r(GenericLines,193,&quot;\(null\)\x20400\x20Bad\x20Request\r\nServer:\x20\r\nDate:\x20Thu,\x2023\x20May\x202019\x2008:05:15\x20GMT\r\nContent-Type:\x20text/html\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nConnection:\x20close\r\n\r\n\t\t&lt;HTML&gt;\n\t\t&lt;HEAD&gt;&lt;TITLE&gt;400\x20Bad\x20Request&lt;/TITLE&gt;&lt;/HEAD&gt;\n\t\t&lt;BODY\x20BGCOLOR=\&quot;#cc9999\&quot;\x20TEXT=\&quot;#000000\&quot;\x20LINK=\&quot;#2020ff\&quot;\x20VLINK=\&quot;#4040cc\&quot;&gt;\n\t\t&lt;H4&gt;400\x20Bad\x20Request&lt;/H4&gt;\nCan&apos;t\x20parse\x20request\.\n&lt;/BODY&gt;\n&lt;/HTML&gt;\n&quot;);"
+					method="table" conf="3" />
+				<script id="fingerprint-strings"
+					output="&#xa;  GenericLines: &#xa;    (null) 400 Bad Request&#xa;    Server: &#xa;    Date: Thu, 23 May 2019 08:05:15 GMT&#xa;    Content-Type: text/html&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    X-XSS-Protection: 1;mode=block&#xa;    X-Content-Type-Options: nosniff&#xa;    Connection: close&#xa;    &lt;HTML&gt;&#xa;    &lt;HEAD&gt;&lt;TITLE&gt;400 Bad Request&lt;/TITLE&gt;&lt;/HEAD&gt;&#xa;    &lt;BODY BGCOLOR=&quot;#cc9999&quot; TEXT=&quot;#000000&quot; LINK=&quot;#2020ff&quot; VLINK=&quot;#4040cc&quot;&gt;&#xa;    &lt;H4&gt;400 Bad Request&lt;/H4&gt;&#xa;    Can&apos;t parse request.&#xa;    &lt;/BODY&gt;&#xa;    &lt;/HTML&gt;">
+					<elem key="GenericLines">&#xa; (null) 400 Bad Request&#xa; Server: &#xa;
+						Date: Thu, 23 May 2019 08:05:15 GMT&#xa; Content-Type:
+						text/html&#xa; X-Frame-Options: SAMEORIGIN&#xa; X-XSS-Protection:
+						1;mode=block&#xa; X-Content-Type-Options: nosniff&#xa; Connection:
+						close&#xa; &lt;HTML&gt;&#xa; &lt;HEAD&gt;&lt;TITLE&gt;400 Bad
+						Request&lt;/TITLE&gt;&lt;/HEAD&gt;&#xa; &lt;BODY
+						BGCOLOR=&quot;#cc9999&quot; TEXT=&quot;#000000&quot;
+						LINK=&quot;#2020ff&quot; VLINK=&quot;#4040cc&quot;&gt;&#xa;
+						&lt;H4&gt;400 Bad Request&lt;/H4&gt;&#xa; Can&apos;t parse
+						request.&#xa; &lt;/BODY&gt;&#xa; &lt;/HTML&gt;</elem>
+				</script>
+			</port>
+		</ports>
+		<times srtt="13939" rttvar="2770" to="100000" />
+	</host>
+	<host starttime="1558598689" endtime="1558599005">
+		<status state="up" reason="conn-refused" reason_ttl="0" />
+		<address addr="192.168.1.12" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="100">
+				<extrareasons reason="conn-refused" count="100" />
+			</extraports>
+		</ports>
+		<times srtt="18637" rttvar="3493" to="100000" />
+	</host>
+	<host starttime="1558598689" endtime="1558599005">
+		<status state="up" reason="conn-refused" reason_ttl="0" />
+		<address addr="192.168.1.15" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="100">
+				<extrareasons reason="conn-refused" count="100" />
+			</extraports>
+		</ports>
+		<times srtt="29246" rttvar="2771" to="100000" />
+	</host>
+	<host starttime="1558598689" endtime="1558599005">
+		<status state="up" reason="conn-refused" reason_ttl="0" />
+		<address addr="192.168.1.25" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="97">
+				<extrareasons reason="conn-refused" count="97" />
+			</extraports>
+			<port protocol="tcp" portid="22">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="ssh" product="OpenSSH"
+					version="7.9p1 Ubuntu 10" extrainfo="Ubuntu Linux; protocol 2.0"
+					ostype="Linux" method="probed" conf="10">
+					<cpe>cpe:/a:openbsd:openssh:7.9p1</cpe>
+					<cpe>cpe:/o:linux:linux_kernel</cpe>
+				</service>
+				<script id="ssh-hostkey"
+					output="&#xa;  2048 da:ba:c4:88:4f:5f:4c:b2:8d:2c:8f:75:7e:47:9d:25 (RSA)&#xa;  256 3f:90:13:c5:9a:fc:c8:c2:d0:43:73:b8:a9:e4:ce:1a (ECDSA)&#xa;  256 41:61:6a:f9:92:3d:b9:2c:80:c4:92:10:7e:bc:5d:8e (ED25519)">
+					<table>
+						<elem key="fingerprint">dabac4884f5f4cb28d2c8f757e479d25</elem>
+						<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDHaq5OPLnkVyzv1aw+GnODaY4u1a0kYeTyevzVk6R4NqY10AOuNq1PR6scMr33lqKu+WV8/8n0poIVRGtZOMyrYa2tx4UQ2CAejVyygaTcd9+46BE2RESp+n2jdk6IYPID1Ck1XlUkuJHsN0l6cbdatLfOjF4RXtnRmoDciYn7MNnzUHZDmsgVmotSdLk5p6f8/jyPiLab1BjdalNuJaNuvPFcgtaINvNHeO8QE/PoE5/bH53zJNl6prqRGqBRpB/NINtvKUigyygu6AGnu0WqgCJqUMbcnhcltTL9TC6UIrZ7XUg6LEoJGA+9XiyF40z8UurVM4DhzdxJ4lMEM+cX</elem>
+						<elem key="bits">2048.0</elem>
+						<elem key="type">ssh-rsa</elem>
+					</table>
+					<table>
+						<elem key="fingerprint">3f9013c59afcc8c2d04373b8a9e4ce1a</elem>
+						<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDUhffAXQc+lyBEoggFNTrYQ4vGiOtBPIDNuCSayQTDZZL3Y26DVwYCCbB4thrO+msvY0+qGh/0rIk1jpiYE42s=</elem>
+						<elem key="bits">256</elem>
+						<elem key="type">ecdsa-sha2-nistp256</elem>
+					</table>
+					<table>
+						<elem key="fingerprint">41616af9923db92c80c492107ebc5d8e</elem>
+						<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAINg6T3In5PLn909IEykCK9KKUY0b0K12yr2Zo+2nsk4r</elem>
+						<elem key="bits">256</elem>
+						<elem key="type">ssh-ed25519</elem>
+					</table>
+				</script>
+			</port>
+			<port protocol="tcp" portid="3389">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="ms-wbt-server" product="xrdp" method="probed"
+					conf="10">
+					<cpe>cpe:/a:jay_sorg:xrdp</cpe>
+				</service>
+			</port>
+			<port protocol="tcp" portid="5900">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="vnc" product="VNC" extrainfo="protocol 3.7"
+					method="probed" conf="10" />
+				<script id="vnc-info"
+					output="&#xa;  Protocol version: 3.7&#xa;  Security types: &#xa;    TLS (18)">
+					<elem key="Protocol version">3.7</elem>
+					<table key="Security types">
+						<table>
+							<elem key="type">18</elem>
+							<elem key="name">TLS</elem>
+						</table>
+					</table>
+				</script>
+			</port>
+		</ports>
+		<times srtt="11963" rttvar="2950" to="100000" />
+	</host>
+	<host starttime="1558598689" endtime="1558599006">
+		<status state="up" reason="conn-refused" reason_ttl="0" />
+		<address addr="192.168.1.30" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="97">
+				<extrareasons reason="conn-refused" count="97" />
+			</extraports>
+			<port protocol="tcp" portid="8008">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="http" method="table" conf="3" />
+				<script id="http-title"
+					output="Site doesn&apos;t have a title (text/html)."></script>
+			</port>
+			<port protocol="tcp" portid="8009">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="ajp13" tunnel="ssl" method="table" conf="3" />
+				<script id="ajp-methods"
+					output="Failed to get a valid response for the OPTION request" />
+				<script id="ssl-cert"
+					output="Subject: commonName=03e22dea-f8e9-f15e-9144-dd3ae8b2cd11&#xa;Not valid before: 2019-05-22T13:54:16&#xa;Not valid after:  2019-05-24T13:54:16">
+					<table key="subject">
+						<elem key="commonName">03e22dea-f8e9-f15e-9144-dd3ae8b2cd11</elem>
+					</table>
+					<table key="issuer">
+						<elem key="commonName">03e22dea-f8e9-f15e-9144-dd3ae8b2cd11</elem>
+					</table>
+					<table key="pubkey">
+						<elem key="bits">2048</elem>
+						<elem key="exponent">userdata: 0x563562ad7688</elem>
+						<elem key="type">rsa</elem>
+						<elem key="modulus">userdata: 0x56356396c5c8</elem>
+					</table>
+					<elem key="sig_algo">sha256WithRSAEncryption</elem>
+					<table key="validity">
+						<elem key="notAfter">2019-05-24T13:54:16</elem>
+						<elem key="notBefore">2019-05-22T13:54:16</elem>
+					</table>
+					<elem key="md5">5a02ca7663de21b3028d68234e6e23b5</elem>
+					<elem key="sha1">56fe1719bd0915ad8fd7c97b895e1b5cf7c293f0</elem>
+					<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN
+						CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC2jCCAcKgAwIBAgIEClTIUDANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDDCQw&#xa;M2UyMmRlYS1mOGU5LWYxNWUtOTE0NC1kZDNhZThiMmNkMTEwHhcNMTkwNTIyMTM1&#xa;NDE2WhcNMTkwNTI0MTM1NDE2WjAvMS0wKwYDVQQDDCQwM2UyMmRlYS1mOGU5LWYx&#xa;NWUtOTE0NC1kZDNhZThiMmNkMTEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK&#xa;AoIBAQDK8Avs/9gCrHs4ohL2wfXTf7PvK8TMHZ5d0WwHnY6wtZf9hH5Ubk3pHKNP&#xa;E6ey+7JZKG+1wXep9saYWPuhRFNqOTPExSLEfEkDxP2eVwHc1qSX31K1ChjHpc38&#xa;7fnOM16GYgYLwbR1NpOICyOW8l4XvxpgsKyDkqS0ktq647RNfvSbsBEwYMS7Neim&#xa;d1FILIxmQzlgWzyBWmlsOMWt3JwcvNPZBaBBwUZQwn9d1F7giOswFFexBTadprZe&#xa;XLKK7u2ZOvm8M2EcA6RpZABNx2WZiuLwiNxCehCIpp+qF71l9xFLO/jFqSrxnUU8&#xa;0+oRA6rYWLbmIvOZjYIQKXM91ibzAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAA94&#xa;UDBmmN2VbSUZMhxGd7oqgM5VFxGs507rEBiq4I3ACwzQxE6UEmIeZpqVD6vIguT+&#xa;OjAo7UzHIdfyE31mbhnmnIjQ5OtA26FcXULt0psljkbEP61ca/8B8Ov0XEtYWre6&#xa;Wh9wfv5mfsIpQJtPFs/jLCOLrkHKMi7mkSd/x9cPPQ5skXkN7ogG6fZsNA0z9PBQ&#xa;23qGmmPP8uTXqkF59wYvrGKCMTYzzwbyYVBqUbqdpFSryCSRLLPDHnDYuULEQKG9&#xa;P/MDMKvSJhDhRa/4BKM1cfEp7VIbixrH/ZM58PKLK7G741ILxOOMPQjgkdBTyd30&#xa;yw9g36Hx4eCcbGHZFao=&#xa;-&#45;&#45;&#45;&#45;END
+						CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+				</script>
+				<script id="ssl-date"
+					output="2019-05-23T08:07:47+00:00; +10s from scanner time.">
+					<elem key="delta">10.0</elem>
+					<elem key="date">2019-05-23T08:07:47+00:00</elem>
+				</script>
+			</port>
+			<port protocol="tcp" portid="8443">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="https-alt" tunnel="ssl" method="table"
+					conf="3" />
+			</port>
+		</ports>
+		<hostscript>
+			<script id="clock-skew"
+				output="mean: 9s, deviation: 0s, median: 9s">
+				<elem key="mean">9</elem>
+				<elem key="stddev">0</elem>
+				<elem key="median">9</elem>
+			</script>
+		</hostscript>
+		<times srtt="45475" rttvar="5522" to="100000" />
+	</host>
+	<host starttime="1558598689" endtime="1558599005">
+		<status state="up" reason="conn-refused" reason_ttl="0" />
+		<address addr="192.168.1.39" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="100">
+				<extrareasons reason="conn-refused" count="100" />
+			</extraports>
+		</ports>
+		<times srtt="455" rttvar="336" to="100000" />
+	</host>
+	<runstats>
+		<finished time="1558599006"
+			timestr="Thu May 23 13:40:06 2019" elapsed="317.25"
+			summary="Nmap done at Thu May 23 13:40:06 2019; 256 IP addresses (6 hosts up) scanned in 317.25 seconds"
+			exit="success" />
+		<hosts up="6" down="250" total="256" />
+	</runstats>
+</nmaprun>

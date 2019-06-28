@@ -1,0 +1,22 @@
+package com.instasafe.nmapscanner;
+
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.JButton;
+
+public class logPanel extends JPanel {
+
+	static JTextArea textArea;
+	public logPanel() {
+		setLayout(null);		
+		JButton btnNewButton = new JButton("Console Output");
+		btnNewButton.setBounds(10, 10, 139, 23);
+		add(btnNewButton);
+		textArea = new JTextArea();
+		textArea.setBounds(0, 50, 589, 195);
+		add(textArea);
+		textArea.setEditable(false);
+
+	}
+}

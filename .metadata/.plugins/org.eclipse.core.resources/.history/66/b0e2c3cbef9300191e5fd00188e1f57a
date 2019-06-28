@@ -1,0 +1,134 @@
+package com.instasafe.nmapscanner;
+
+import java.awt.EventQueue;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import java.awt.Toolkit;
+import java.awt.GridBagLayout;
+import javax.swing.UIManager;
+import javax.swing.JLabel;
+import java.awt.GridBagConstraints;
+import javax.swing.JProgressBar;
+import javax.swing.JButton;
+import javax.swing.JRadioButton;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+public class startHere {
+
+	private JFrame frame;
+	private ImageIcon image;
+	private JLabel label1;
+	static JProgressBar progressBar = new JProgressBar();
+	private JButton btnStartDownloads;
+	private JRadioButton rdbtnNewRadioButton;
+	private JRadioButton rdbtnNewRadioButton_1;
+	
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					startHere window = new startHere();
+					window.frame.setVisible(true);
+				//	fill();
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	public startHere() throws Exception {
+		initialize();
+	
+	}
+	private void initialize() throws Exception {
+		frame = new JFrame();
+		frame.setAlwaysOnTop(true);
+		frame.setBackground(UIManager.getColor("Button.light"));
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Chandranshi\\Documents\\Nmap Project\\NmapScanner\\instasafe-icon.png"));
+		frame.setBounds(100, 100, 591, 383);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		image= new ImageIcon(getClass().getResource("/resources/instasafe-icon.png"));
+		label1=new JLabel(image);
+		progressBar.setValue(0); 
+		progressBar.setStringPainted(true);
+		
+		rdbtnNewRadioButton = new JRadioButton("All");
+		
+		rdbtnNewRadioButton_1 = new JRadioButton("Top 100");
+		
+		btnStartDownloads = new JButton("Start Downloads");
+		btnStartDownloads.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				try {
+				
+				start();
+			}
+				catch(Exception e1)
+				{
+					e1.printStackTrace();
+				}
+			}});
+		
+		JLabel lblNewLabel = new JLabel("Ports");
+		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.TRAILING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addComponent(label1)
+					.addContainerGap(453, Short.MAX_VALUE))
+				.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
+					.addGap(89)
+					.addComponent(progressBar, GroupLayout.PREFERRED_SIZE, 370, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(116, Short.MAX_VALUE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap(190, Short.MAX_VALUE)
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
+						.addComponent(btnStartDownloads, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addComponent(lblNewLabel)
+							.addGap(26)
+							.addComponent(rdbtnNewRadioButton)
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addComponent(rdbtnNewRadioButton_1)))
+					.addGap(214))
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addComponent(label1)
+					.addGap(49)
+					.addComponent(progressBar, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+					.addGap(64)
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblNewLabel)
+						.addComponent(rdbtnNewRadioButton)
+						.addComponent(rdbtnNewRadioButton_1))
+					.addGap(18)
+					.addComponent(btnStartDownloads)
+					.addGap(103))
+		);
+		frame.getContentPane().setLayout(groupLayout);
+		//fill();
+	}
+	
+	public static void start() throws Exception
+	{
+		progressBar.setString("Downloading Required Resources");
+		Main.main(null);
+				
+	}
+	public static void fill(int num) throws Exception
+	{
+		
+		progressBar.setValue(nums);  
+	}
+}

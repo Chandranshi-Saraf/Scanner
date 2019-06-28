@@ -1,0 +1,52 @@
+package com.instasafe.nmapscanner;
+
+import java.awt.EventQueue;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import java.awt.Toolkit;
+import java.awt.GridBagLayout;
+import javax.swing.UIManager;
+import javax.swing.JLabel;
+
+public class startHere {
+
+	private JFrame frame;
+	private ImageIcon image;
+	private JLabel label1;
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					startHere window = new startHere();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	public startHere() {
+		initialize();
+	}
+	private void initialize() {
+		frame = new JFrame();
+		frame.setAlwaysOnTop(true);
+		frame.setBackground(UIManager.getColor("Button.light"));
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Chandranshi\\Documents\\Nmap Project\\NmapScanner\\instasafe-icon.png"));
+		frame.setBounds(100, 100, 591, 383);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		GridBagLayout gridBagLayout = new GridBagLayout();
+		gridBagLayout.columnWidths = new int[]{0, 0, 0};
+		gridBagLayout.rowHeights = new int[]{0, 0, 0};
+		gridBagLayout.columnWeights = new double[]{0.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.rowWeights = new double[]{0.0, 0.0, Double.MIN_VALUE};
+		frame.getContentPane().setLayout(gridBagLayout);	
+		image= new ImageIcon(getClass().getResource("rseources/instasafe-icon.png"));
+		label1=new JLabel(image);
+		frame.add(label1);
+	}
+
+}

@@ -1,0 +1,96 @@
+package com.instasafe.nmapscanner;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class VulnerablityScan {
+	private static final int MYTHREADS = 3;
+	List<NiktoScanResponse> niktoResponse = new ArrayList<NiktoScanResponse>();
+	List<ZapSite> zapSite = new ArrayList<ZapSite>();
+	public List<NiktoScanResponse> niktoScan(List<HostInfo> hostList, String tmpDir) throws Exception {
+//		SecondScan response = new SecondScan();
+		
+//		List<ZapSite> zsite = new ArrayList<ZapSite>();
+//		NiktoScanResponse nResponse =null;
+		ExecutorService executor = Executors.newFixedThreadPool(MYTHREADS);
+		String host = "";
+		String s="\n"+"Number of hosts found are: "+hostList.size();
+		try
+		{
+			logs.log.textArea.setText(s);
+		}
+		catch(Exception e)
+		{}
+		System.out.println(hostList.size());
+		for (int i = 0; i < hostList.size(); i++) {
+			Thread.sleep(12000);
+			System.out.println("Host for ZapScan scan: " + hostList.get(i).getHostAddr());
+			startHere.progressBar.setString("NMAP  is Scanning for the open ports..");
+			s="\n"+"Host for ZapScan scan: " + hostList.get(i).getHostAddr();
+			String ss="";
+			try
+			{
+				ss=logs.log.textArea.getText();
+			}
+			catch(Exception e)
+			{}
+			ss=ss+"\n"+s
+			try
+			{
+				logs.log.textArea.setText(s);
+			}
+			catch(Exception e)
+			{}
+			host = hostList.get(i).getHostAddr();	
+			Runnable worker = new myRunnable(host,i);
+			executor.execute(worker);
+						
+		}executor.shutdown();
+
+			// Wait until all threads are finish
+			while (!executor.isTerminated()) {
+	 
+			}
+		System.out.println("\nFinished all threads");
+		s="\n"+"Finished All Threads for ZapScan";
+		try
+		{
+			logs.log.textArea.setText(s);
+		}
+		catch(Exception e)
+		{}
+		zapSite=myRunnable.zapSite;
+			
+//			if (hostList.get(i).getPortInfo() != null) {
+//				for (int j = 0; j < hostList.get(i).getPortInfo().size(); j++) {
+//					System.out.println(hostList.get(i).getPortInfo().size());
+//					port = hostList.get(i).getPortInfo().get(j).getPort();
+//					nResponse=response.scanForVulnerabilities(host, port);
+//					
+//					if (nResponse== null) {
+//						
+//						System.out.println("NULL!");
+//					}
+//					else
+//					{						
+//						niktoResponse.add(nResponse);
+//						System.out.println("Port for Nikto scan: " + hostList.get(i).getPortInfo().get(j).getPort());
+///					pdf.addVulnerablity(niktoResponse.get(j));
+//						String url = host + ":" + port;
+//						ZapScan zs = new ZapScan();
+//						zsite=zs.scan(tmpDir, url);
+//						for(int k=0; k<zsite.size();k++)
+//						{
+//							zapSite.add(zsite.get(k));
+//						}
+//					}
+//				}
+//			}
+//		
+//		pdf.closeNikto();
+		return niktoResponse;
+
+	}
+}

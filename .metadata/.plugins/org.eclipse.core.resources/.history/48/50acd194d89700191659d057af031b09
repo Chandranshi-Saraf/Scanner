@@ -1,0 +1,56 @@
+package com.instasafe.nmapscanner;
+
+import java.awt.EventQueue;
+import java.awt.Toolkit;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class logs {
+
+	private JFrame frame;
+	private ImageIcon image;
+	private static JLabel label1;
+	 static String property = "java.io.tmpdir";
+	 static String tempDir = System.getProperty(property);
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					logs window = new logs();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public logs() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(tempDir + "scan/instasafe-icon.png"));
+		frame.setBounds(100, 100, 591, 383);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		image= new ImageIcon(getClass().getResource("/resources/instasafe-icon.png"));
+		label1=new JLabel(image);
+		label1.setBounds(0, 0, 122, 39);
+	}
+
+}

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Wed May 22 18:30:02 2019 as: nmap -A -T4 -F 
+	-oX NmapOutput.xml 192.168.1.0/28 -->
+<nmaprun scanner="nmap"
+	args="nmap -A -T4 -F -oX NmapOutput.xml 192.168.1.0/28"
+	start="1558530002" startstr="Wed May 22 18:30:02 2019" version="7.70"
+	xmloutputversion="1.04">
+	<scaninfo type="connect" protocol="tcp" numservices="100"
+		services="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157" />
+	<verbose level="0" />
+	<debugging level="0" />
+	<host starttime="1558530002" endtime="1558530197">
+		<status state="up" reason="syn-ack" reason_ttl="0" />
+		<address addr="192.168.1.1" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="96">
+				<extrareasons reason="conn-refused" count="96" />
+			</extraports>
+			<port protocol="tcp" portid="53">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="domain"
+					extrainfo="generic dns response: NOTIMP"
+					servicefp="SF-Port53-TCP:V=7.70%I=7%D=5/22%Time=5CE547E7%P=x86_64-pc-linux-gnu%r(DNSVersionBindReqTCP,20,&quot;\0\x1e\0\x06\x81\x82\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03&quot;)%r(DNSStatusRequestTCP,E,&quot;\0\x0c\0\0\x90\x04\0\0\0\0\0\0\0\0&quot;);"
+					method="probed" conf="10" />
+				<script id="fingerprint-strings"
+					output="&#xa;  DNSVersionBindReqTCP: &#xa;    version&#xa;    bind">
+					<elem key="DNSVersionBindReqTCP">&#xa; version&#xa; bind</elem>
+				</script>
+			</port>
+			<port protocol="tcp" portid="80">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="http" product=""
+					servicefp="SF-Port80-TCP:V=7.70%I=7%D=5/22%Time=5CE547E7%P=x86_64-pc-linux-gnu%r(GenericLines,193,&quot;\(null\)\x20400\x20Bad\x20Request\r\nServer:\x20\r\nDate:\x20Wed,\x2022\x20May\x202019\x2013:00:33\x20GMT\r\nContent-Type:\x20text/html\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nConnection:\x20close\r\n\r\n\t\t&lt;HTML&gt;\n\t\t&lt;HEAD&gt;&lt;TITLE&gt;400\x20Bad\x20Request&lt;/TITLE&gt;&lt;/HEAD&gt;\n\t\t&lt;BODY\x20BGCOLOR=\&quot;#cc9999\&quot;\x20TEXT=\&quot;#000000\&quot;\x20LINK=\&quot;#2020ff\&quot;\x20VLINK=\&quot;#4040cc\&quot;&gt;\n\t\t&lt;H4&gt;400\x20Bad\x20Request&lt;/H4&gt;\nCan&apos;t\x20parse\x20request\.\n&lt;/BODY&gt;\n&lt;/HTML&gt;\n&quot;);"
+					method="probed" conf="10" />
+				<script id="fingerprint-strings"
+					output="&#xa;  GenericLines: &#xa;    (null) 400 Bad Request&#xa;    Server: &#xa;    Date: Wed, 22 May 2019 13:00:33 GMT&#xa;    Content-Type: text/html&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    X-XSS-Protection: 1;mode=block&#xa;    X-Content-Type-Options: nosniff&#xa;    Connection: close&#xa;    &lt;HTML&gt;&#xa;    &lt;HEAD&gt;&lt;TITLE&gt;400 Bad Request&lt;/TITLE&gt;&lt;/HEAD&gt;&#xa;    &lt;BODY BGCOLOR=&quot;#cc9999&quot; TEXT=&quot;#000000&quot; LINK=&quot;#2020ff&quot; VLINK=&quot;#4040cc&quot;&gt;&#xa;    &lt;H4&gt;400 Bad Request&lt;/H4&gt;&#xa;    Can&apos;t parse request.&#xa;    &lt;/BODY&gt;&#xa;    &lt;/HTML&gt;">
+					<elem key="GenericLines">&#xa; (null) 400 Bad Request&#xa; Server: &#xa;
+						Date: Wed, 22 May 2019 13:00:33 GMT&#xa; Content-Type:
+						text/html&#xa; X-Frame-Options: SAMEORIGIN&#xa; X-XSS-Protection:
+						1;mode=block&#xa; X-Content-Type-Options: nosniff&#xa; Connection:
+						close&#xa; &lt;HTML&gt;&#xa; &lt;HEAD&gt;&lt;TITLE&gt;400 Bad
+						Request&lt;/TITLE&gt;&lt;/HEAD&gt;&#xa; &lt;BODY
+						BGCOLOR=&quot;#cc9999&quot; TEXT=&quot;#000000&quot;
+						LINK=&quot;#2020ff&quot; VLINK=&quot;#4040cc&quot;&gt;&#xa;
+						&lt;H4&gt;400 Bad Request&lt;/H4&gt;&#xa; Can&apos;t parse
+						request.&#xa; &lt;/BODY&gt;&#xa; &lt;/HTML&gt;</elem>
+				</script>
+				<script id="http-auth"
+					output="&#xa;HTTP/1.1 401 Unauthorized\x0D&#xa;  Basic realm=NETGEAR R6220&#xa;">
+					<table>
+						<elem key="scheme">Basic</elem>
+						<table key="params">
+							<elem key="realm">NETGEAR R6220</elem>
+						</table>
+					</table>
+				</script>
+				<script id="http-server-header" output="&lt;empty&gt;">
+					<elem></elem>
+				</script>
+				<script id="http-title" output=" Authorization warning">
+					<elem key="title"> Authorization warning</elem>
+				</script>
+			</port>
+			<port protocol="tcp" portid="631">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="ipp" method="table" conf="3" />
+			</port>
+			<port protocol="tcp" portid="5000">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="upnp"
+					servicefp="SF-Port5000-TCP:V=7.70%I=7%D=5/22%Time=5CE547E2%P=x86_64-pc-linux-gnu%r(GenericLines,193,&quot;\(null\)\x20400\x20Bad\x20Request\r\nServer:\x20\r\nDate:\x20Wed,\x2022\x20May\x202019\x2013:00:28\x20GMT\r\nContent-Type:\x20text/html\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nConnection:\x20close\r\n\r\n\t\t&lt;HTML&gt;\n\t\t&lt;HEAD&gt;&lt;TITLE&gt;400\x20Bad\x20Request&lt;/TITLE&gt;&lt;/HEAD&gt;\n\t\t&lt;BODY\x20BGCOLOR=\&quot;#cc9999\&quot;\x20TEXT=\&quot;#000000\&quot;\x20LINK=\&quot;#2020ff\&quot;\x20VLINK=\&quot;#4040cc\&quot;&gt;\n\t\t&lt;H4&gt;400\x20Bad\x20Request&lt;/H4&gt;\nCan&apos;t\x20parse\x20request\.\n&lt;/BODY&gt;\n&lt;/HTML&gt;\n&quot;);"
+					method="table" conf="3" />
+				<script id="fingerprint-strings"
+					output="&#xa;  GenericLines: &#xa;    (null) 400 Bad Request&#xa;    Server: &#xa;    Date: Wed, 22 May 2019 13:00:28 GMT&#xa;    Content-Type: text/html&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    X-XSS-Protection: 1;mode=block&#xa;    X-Content-Type-Options: nosniff&#xa;    Connection: close&#xa;    &lt;HTML&gt;&#xa;    &lt;HEAD&gt;&lt;TITLE&gt;400 Bad Request&lt;/TITLE&gt;&lt;/HEAD&gt;&#xa;    &lt;BODY BGCOLOR=&quot;#cc9999&quot; TEXT=&quot;#000000&quot; LINK=&quot;#2020ff&quot; VLINK=&quot;#4040cc&quot;&gt;&#xa;    &lt;H4&gt;400 Bad Request&lt;/H4&gt;&#xa;    Can&apos;t parse request.&#xa;    &lt;/BODY&gt;&#xa;    &lt;/HTML&gt;">
+					<elem key="GenericLines">&#xa; (null) 400 Bad Request&#xa; Server: &#xa;
+						Date: Wed, 22 May 2019 13:00:28 GMT&#xa; Content-Type:
+						text/html&#xa; X-Frame-Options: SAMEORIGIN&#xa; X-XSS-Protection:
+						1;mode=block&#xa; X-Content-Type-Options: nosniff&#xa; Connection:
+						close&#xa; &lt;HTML&gt;&#xa; &lt;HEAD&gt;&lt;TITLE&gt;400 Bad
+						Request&lt;/TITLE&gt;&lt;/HEAD&gt;&#xa; &lt;BODY
+						BGCOLOR=&quot;#cc9999&quot; TEXT=&quot;#000000&quot;
+						LINK=&quot;#2020ff&quot; VLINK=&quot;#4040cc&quot;&gt;&#xa;
+						&lt;H4&gt;400 Bad Request&lt;/H4&gt;&#xa; Can&apos;t parse
+						request.&#xa; &lt;/BODY&gt;&#xa; &lt;/HTML&gt;</elem>
+				</script>
+			</port>
+		</ports>
+		<times srtt="6133" rttvar="2619" to="100000" />
+	</host>
+	<host starttime="1558530002" endtime="1558530196">
+		<status state="up" reason="conn-refused" reason_ttl="0" />
+		<address addr="192.168.1.2" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="100">
+				<extrareasons reason="conn-refused" count="100" />
+			</extraports>
+		</ports>
+		<times srtt="35653" rttvar="15323" to="100000" />
+	</host>
+	<host starttime="1558530002" endtime="1558530196">
+		<status state="up" reason="conn-refused" reason_ttl="0" />
+		<address addr="192.168.1.4" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="100">
+				<extrareasons reason="conn-refused" count="100" />
+			</extraports>
+		</ports>
+		<times srtt="39806" rttvar="3910" to="100000" />
+	</host>
+	<host starttime="1558530002" endtime="1558530196">
+		<status state="up" reason="conn-refused" reason_ttl="0" />
+		<address addr="192.168.1.7" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="100">
+				<extrareasons reason="conn-refused" count="100" />
+			</extraports>
+		</ports>
+		<times srtt="46019" rttvar="10348" to="100000" />
+	</host>
+	<host starttime="1558530002" endtime="1558530197">
+		<status state="up" reason="conn-refused" reason_ttl="0" />
+		<address addr="192.168.1.8" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="89">
+				<extrareasons reason="conn-refused" count="89" />
+			</extraports>
+			<port protocol="tcp" portid="135">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="msrpc" product="Microsoft Windows RPC"
+					ostype="Windows" method="probed" conf="10">
+					<cpe>cpe:/o:microsoft:windows</cpe>
+				</service>
+			</port>
+			<port protocol="tcp" portid="139">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="netbios-ssn"
+					product="Microsoft Windows netbios-ssn" ostype="Windows"
+					method="probed" conf="10">
+					<cpe>cpe:/o:microsoft:windows</cpe>
+				</service>
+			</port>
+			<port protocol="tcp" portid="445">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="microsoft-ds"
+					product="Windows 8.1 Pro 9600 microsoft-ds"
+					extrainfo="workgroup: WORKGROUP" hostname="PERUMALK"
+					ostype="Windows" method="probed" conf="10">
+					<cpe>cpe:/o:microsoft:windows</cpe>
+				</service>
+			</port>
+			<port protocol="tcp" portid="5357">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="http" product="Microsoft HTTPAPI httpd"
+					version="2.0" extrainfo="SSDP/UPnP" ostype="Windows"
+					method="probed" conf="10">
+					<cpe>cpe:/o:microsoft:windows</cpe>
+				</service>
+				<script id="http-server-header"
+					output="Microsoft-HTTPAPI/2.0">
+					<elem>Microsoft-HTTPAPI/2.0</elem>
+				</script>
+				<script id="http-title" output="Service Unavailable">
+					<elem key="title">Service Unavailable</elem>
+				</script>
+			</port>
+			<port protocol="tcp" portid="6000">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="X11" method="table" conf="3" />
+				<script id="x11-access"
+					output="ERROR: Script execution failed (use -d to debug)" />
+			</port>
+			<port protocol="tcp" portid="8888">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="rtsp"
+					servicefp="SF-Port8888-TCP:V=7.70%I=7%D=5/22%Time=5CE547E2%P=x86_64-pc-linux-gnu%r(GetRequest,5E,&quot;HTTP/1\.0\x20200\x20OK\r\nConnection:\x20Close\r\nContent-Length:\x200\r\nDate:\x20Wed,\x2022\x20May\x202019\x2013:00:31\x20GMT\r\n\r\n&quot;)%r(HTTPOptions,5E,&quot;HTTP/1\.0\x20200\x20OK\r\nConnection:\x20Close\r\nContent-Length:\x200\r\nDate:\x20Wed,\x2022\x20May\x202019\x2013:00:31\x20GMT\r\n\r\n&quot;)%r(FourOhFourRequest,5E,&quot;HTTP/1\.0\x20200\x20OK\r\nConnection:\x20Close\r\nContent-Length:\x200\r\nDate:\x20Wed,\x2022\x20May\x202019\x2013:00:31\x20GMT\r\n\r\n&quot;)%r(GenericLines,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20Close\r\n\r\n&quot;)%r(RTSPRequest,5E,&quot;RTSP/1\.0\x20200\x20OK\r\nConnection:\x20Close\r\nContent-Length:\x200\r\nDate:\x20Wed,\x2022\x20May\x202019\x2013:00:41\x20GMT\r\n\r\n&quot;)%r(SIPOptions,5D,&quot;SIP/2\.0\x20200\x20OK\r\nConnection:\x20Close\r\nContent-Length:\x200\r\nDate:\x20Wed,\x2022\x20May\x202019\x2013:00:41\x20GMT\r\n\r\n&quot;);"
+					method="probed" conf="10" />
+				<script id="fingerprint-strings"
+					output="&#xa;  FourOhFourRequest, GetRequest, HTTPOptions: &#xa;    HTTP/1.0 200 OK&#xa;    Connection: Close&#xa;    Content-Length: 0&#xa;    Date: Wed, 22 May 2019 13:00:31 GMT&#xa;  GenericLines: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: Close&#xa;  RTSPRequest: &#xa;    RTSP/1.0 200 OK&#xa;    Connection: Close&#xa;    Content-Length: 0&#xa;    Date: Wed, 22 May 2019 13:00:41 GMT&#xa;  SIPOptions: &#xa;    SIP/2.0 200 OK&#xa;    Connection: Close&#xa;    Content-Length: 0&#xa;    Date: Wed, 22 May 2019 13:00:41 GMT">
+					<elem key="FourOhFourRequest, GetRequest, HTTPOptions">&#xa; HTTP/1.0 200 OK&#xa; Connection: Close&#xa;
+						Content-Length: 0&#xa; Date: Wed, 22 May 2019 13:00:31 GMT</elem>
+					<elem key="GenericLines">&#xa; HTTP/1.1 400 Bad Request&#xa; Connection:
+						Close</elem>
+					<elem key="RTSPRequest">&#xa; RTSP/1.0 200 OK&#xa; Connection: Close&#xa;
+						Content-Length: 0&#xa; Date: Wed, 22 May 2019 13:00:41 GMT</elem>
+					<elem key="SIPOptions">&#xa; SIP/2.0 200 OK&#xa; Connection: Close&#xa;
+						Content-Length: 0&#xa; Date: Wed, 22 May 2019 13:00:41 GMT</elem>
+				</script>
+				<script id="rtsp-methods"
+					output="ERROR: Script execution failed (use -d to debug)" />
+			</port>
+			<port protocol="tcp" portid="49152">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="msrpc" product="Microsoft Windows RPC"
+					ostype="Windows" method="probed" conf="10">
+					<cpe>cpe:/o:microsoft:windows</cpe>
+				</service>
+			</port>
+			<port protocol="tcp" portid="49153">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="msrpc" product="Microsoft Windows RPC"
+					ostype="Windows" method="probed" conf="10">
+					<cpe>cpe:/o:microsoft:windows</cpe>
+				</service>
+			</port>
+			<port protocol="tcp" portid="49154">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="msrpc" product="Microsoft Windows RPC"
+					ostype="Windows" method="probed" conf="10">
+					<cpe>cpe:/o:microsoft:windows</cpe>
+				</service>
+			</port>
+			<port protocol="tcp" portid="49155">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="msrpc" product="Microsoft Windows RPC"
+					ostype="Windows" method="probed" conf="10">
+					<cpe>cpe:/o:microsoft:windows</cpe>
+				</service>
+			</port>
+			<port protocol="tcp" portid="49157">
+				<state state="open" reason="syn-ack" reason_ttl="0" />
+				<service name="msrpc" product="Microsoft Windows RPC"
+					ostype="Windows" method="probed" conf="10">
+					<cpe>cpe:/o:microsoft:windows</cpe>
+				</service>
+			</port>
+		</ports>
+		<hostscript>
+			<script id="clock-skew"
+				output="mean: -1h49m46s, deviation: 3h10m30s, median: 12s">
+				<elem key="median">12</elem>
+				<elem key="stddev">11430</elem>
+				<elem key="mean">-6586</elem>
+			</script>
+			<script id="nbstat"
+				output="NetBIOS name: PERUMALK, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 10:02:b5:e7:1a:a8 (Intel Corporate)">
+				<table key="statistics">
+					<elem>10 02 b5 e7 1a a8 00 00 00 00 00 00 00 00 00 00 00</elem>
+					<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+					<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+				</table>
+				<elem key="user">&lt;unknown&gt;</elem>
+				<elem key="server_name">PERUMALK</elem>
+				<table key="names">
+					<table>
+						<elem key="name">PERUMALK</elem>
+						<elem key="flags">17408</elem>
+						<elem key="suffix">32</elem>
+					</table>
+					<table>
+						<elem key="name">PERUMALK</elem>
+						<elem key="flags">17408</elem>
+						<elem key="suffix">0</elem>
+					</table>
+					<table>
+						<elem key="name">WORKGROUP</elem>
+						<elem key="flags">50176</elem>
+						<elem key="suffix">0</elem>
+					</table>
+					<table>
+						<elem key="name">WORKGROUP</elem>
+						<elem key="flags">50176</elem>
+						<elem key="suffix">30</elem>
+					</table>
+				</table>
+				<table key="mac">
+					<elem key="address">10:02:b5:e7:1a:a8</elem>
+					<elem key="manuf">Intel Corporate</elem>
+				</table>
+			</script>
+			<script id="smb-os-discovery"
+				output="&#xa;  OS: Windows 8.1 Pro 9600 (Windows 8.1 Pro 6.3)&#xa;  OS CPE: cpe:/o:microsoft:windows_8.1::-&#xa;  Computer name: perumalk&#xa;  NetBIOS computer name: PERUMALK\x00&#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2019-05-22T18:32:57+05:30&#xa;">
+				<elem key="os">Windows 8.1 Pro 9600</elem>
+				<elem key="lanmanager">Windows 8.1 Pro 6.3</elem>
+				<elem key="server">PERUMALK\x00</elem>
+				<elem key="date">2019-05-22T18:32:57+05:30</elem>
+				<elem key="fqdn">perumalk</elem>
+				<elem key="domain_dns">perumalk</elem>
+				<elem key="workgroup">WORKGROUP\x00</elem>
+				<elem key="cpe">cpe:/o:microsoft:windows_8.1::-</elem>
+			</script>
+			<script id="smb-security-mode"
+				output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)">
+				<elem key="account_used">guest</elem>
+				<elem key="authentication_level">user</elem>
+				<elem key="challenge_response">supported</elem>
+				<elem key="message_signing">disabled</elem>
+			</script>
+			<script id="smb2-security-mode"
+				output="&#xa;  2.02: &#xa;    Message signing enabled but not required">
+				<table key="2.02">
+					<elem>Message signing enabled but not required</elem>
+				</table>
+			</script>
+			<script id="smb2-time"
+				output="&#xa;  date: 2019-05-22 18:32:57&#xa;  start_date: 2019-05-21 11:30:39">
+				<elem key="date">2019-05-22 18:32:57</elem>
+				<elem key="start_date">2019-05-21 11:30:39</elem>
+			</script>
+		</hostscript>
+		<times srtt="14322" rttvar="3609" to="100000" />
+	</host>
+	<host starttime="1558530002" endtime="1558530196">
+		<status state="up" reason="conn-refused" reason_ttl="0" />
+		<address addr="192.168.1.11" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="100">
+				<extrareasons reason="conn-refused" count="100" />
+			</extraports>
+		</ports>
+		<times srtt="33358" rttvar="5608" to="100000" />
+	</host>
+	<host starttime="1558530002" endtime="1558530196">
+		<status state="up" reason="conn-refused" reason_ttl="0" />
+		<address addr="192.168.1.12" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="100">
+				<extrareasons reason="conn-refused" count="100" />
+			</extraports>
+		</ports>
+		<times srtt="16784" rttvar="2590" to="100000" />
+	</host>
+	<host starttime="1558530002" endtime="1558530196">
+		<status state="up" reason="conn-refused" reason_ttl="0" />
+		<address addr="192.168.1.13" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="100">
+				<extrareasons reason="conn-refused" count="100" />
+			</extraports>
+		</ports>
+		<times srtt="30521" rttvar="2112" to="100000" />
+	</host>
+	<host starttime="1558530002" endtime="1558530196">
+		<status state="up" reason="conn-refused" reason_ttl="0" />
+		<address addr="192.168.1.15" addrtype="ipv4" />
+		<hostnames>
+		</hostnames>
+		<ports>
+			<extraports state="closed" count="100">
+				<extrareasons reason="conn-refused" count="100" />
+			</extraports>
+		</ports>
+		<times srtt="20009" rttvar="4508" to="100000" />
+	</host>
+	<runstats>
+		<finished time="1558530197"
+			timestr="Wed May 22 18:33:17 2019" elapsed="195.30"
+			summary="Nmap done at Wed May 22 18:33:17 2019; 16 IP addresses (9 hosts up) scanned in 195.30 seconds"
+			exit="success" />
+		<hosts up="9" down="7" total="16" />
+	</runstats>
+</nmaprun>

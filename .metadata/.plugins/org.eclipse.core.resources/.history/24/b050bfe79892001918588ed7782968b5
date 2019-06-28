@@ -1,0 +1,60 @@
+package com.instasafe.nmapscanner;
+
+import java.io.File;
+
+public class Main {
+
+	private static String OS = System.getProperty("os.name").toLowerCase();
+
+	public static void main(String[] args) throws Exception {
+
+		String property = "java.io.tmpdir";
+		String tempDir = System.getProperty(property);
+
+		new File(tempDir + "/scan").mkdirs();
+		
+		new File(tempDir + "/scan/log").mkdirs();
+		File dir = new File(tempDir + "/scan/log");
+		System.out.println("OS current temporary directory is " + tempDir);
+		
+//		List<NiktoScanResponse> niktoResponse = new ArrayList<NiktoScanResponse>();
+//		List<HostInfo> hostList = new ArrayList<HostInfo>();
+//		List<ZapSite> zapSite = new ArrayList<ZapSite>();
+
+		System.out.println(OS);
+
+		if (!ToolChecker.isNmapExists()) {
+			ToolDownloder.donwloadNmap();
+			ToolChecker.isNmapExists();
+		}
+//
+//		if (!ToolChecker.isNiktoExists()) {
+//			ToolDownloder.donwloadNikto();
+//			ToolChecker.isNiktoExists();
+//		}
+		if (!ToolChecker.isZapExists()) {
+			ToolDownloder.donwloadZap();
+			ToolChecker.isZapExists();
+		}
+
+		startScan sc = new startScan();
+		sc.scan(tempDir);
+		deleteDirectory(dir);
+
+	}
+	
+	 public static boolean deleteDirectory(File dir) {
+	        if (dir.isDirectory()) {
+	            File[] children = dir.listFiles();
+	            for (int i = 0; i < children.length; i++) {
+	                boolean success = deleteDirectory(children[i]);
+	                if (!success) {
+	                    return false;
+	                }
+	            }
+	        }	        
+	        System.out.println("removing file or directory : " + dir.getName());
+	        return dir.delete();
+	    }
+
+}
